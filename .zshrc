@@ -1,45 +1,13 @@
-
-# User Configuration
-POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_STATUS_CROSS=true
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator os_icon dir_writable dir rbenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs history time)
-POWERLEVEL9K_LINUX_ICON=$' \uF1D1'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='111'
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
-POWERLEVEL9K_DIR_HOME_BACKGROUND='111'
-POWERLEVEL9K_DIR_HOME_FOREGROUND='black'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='111'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
-POWERLEVEL9K_OK_ICON=
-POWERLEVEL9K_FAIL_ICON=
-POWERLEVEL9K_HOME_ICON=
-POWERLEVEL9K_HOME_SUB_ICON=
-POWERLEVEL9K_ROOT_INDICATOR_BACKGROUND='196'
-POWERLEVEL9K_ROOT_INDICATOR_FOREGROUND='yellow'
-# POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='black'
-# POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='white'
-POWERLEVEL9K_OS_ICON_BACKGROUND='black'
-POWERLEVEL9K_OS_ICON_FOREGROUND='white'
-POWERLEVEL9K_ROOT_ICON=$'\uE74F'
-POWERLEVEL9K_USER_ICON=
-POWERLEVEL9K_FOLDER_ICON=
-POWERLEVEL9K_LOCK_ICON=
-POWERLEVEL9K_EXECUTION_TIME_ICON=
-POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$'\uE0C6'
-POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=$'\uE0C7'
-
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=~/.oh-my-zsh
+  export ZSH=/home/nofox/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="bira"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -101,7 +69,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=de_DE.UTF-8
+# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then

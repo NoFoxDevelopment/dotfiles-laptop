@@ -36,17 +36,17 @@ bindsym $mod+Return exec termite
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+# bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -55,10 +55,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down 
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -67,15 +67,21 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+Shift+v split h
 
 # split in vertical orientation
 bindsym $mod+v split v
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
 #######################
 # workspace variables #
-#######################
-set $ws0 "0: "
+######################
+set $ws0 "0: "
 set $ws1 "1: "
 set $ws2 "2: "
 set $ws3 "3: "
@@ -134,10 +140,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 2 px or 2 ppt
-        bindsym k resize grow height 2 px or 2 ppt
-        bindsym l resize shrink height 2 px or 2 ppt
-        bindsym semicolon resize grow width 2 px or 2 ppt
+        bindsym h resize shrink width 2 px or 2 ppt
+        bindsym j resize grow height 2 px or 2 ppt
+        bindsym k resize shrink height 2 px or 2 ppt
+        bindsym l resize grow width 2 px or 2 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 2 px or 2 ppt
@@ -186,14 +192,15 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-bindsym $mod+Mod1+l exec i3lock-fancy -p -t Alohamora.
+bindsym $mod+Mod1+l exec i3lock-fancy -p -t Alohamora
 
 for_window [class="^.*"] border pixel 0 
 
-smart_gaps on
+# smart_gaps on
 
-gaps inner 10
-gaps outer 10
+gaps inner 5 
+gaps outer 5 
 
-exec --no-startup-id compton
-exec --no-startup-id i3-msg 'feh --bg-center ~/Pictures/Wallpapers/wallpaper.jpg'
+exec --no-startup-id compton --config ~/.config/compton.conf
+exec_always --no-startup-id feh --bg-center /home/nofox/Pictures/Wallpapers/wallpaper.png
+
